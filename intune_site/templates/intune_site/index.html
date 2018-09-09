@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>intune</title>
+    <link rel="stylesheet" href="../../static/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div id="details">
+                <div id="user_details"></div>
+                <div id="spotify_playlist_details"></div>
+                <div id="soundcloud_playlist_details"></div>
+                <div id="youtube_playlist_details"></div>
+            </div>
+            <div class="form" id="form">
+                <form action="" method="GET">
+                    <p><input type="text" name="user" id="user" placeholder="spotify username"></p>
+                    <p><input type="text" name="spotify_playlist" id="spotify_playlist" placeholder="spotify playlist"></p>
+                    <p><input type="text" name="soundcloud_playlist" id="soundcloud_playlist" placeholder="soundcloud playlist"></p>
+                    <p><input type="text" name="youtube_playlist" id="youtube_playlist" placeholder="youtube playlist"></p>
+                    <p><button class="full">sync</button></p>
+                </form>
+            </div>
+            <div class="contact" id="contact">
+                <a href="https://github.com/gcmontilla">greg m</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $("input").focus(function () {
+            $(this).attr('placeholder', 'selected');
+        }).blur(function () {
+            $(this).attr('placeholder', 'spotify username');
+        })
+
+        document.getElementById("demo").innerHTML = "Test";
+    </script>
+</body>
+</html>
